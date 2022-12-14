@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "821020032702",
+    "project_id": "crewchat-5f02c",
+    "storage_bucket": "crewchat-5f02c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:821020032702:android:945b129498e34e377fa8ef",
+        "android_client_info": {
+          "package_name": "com.example.crewchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "821020032702-nukj5kutcojsl1lskf1gtav6dmr3vth4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlC3Ic039B3BuOozgPHfkmlQsX0z2KgGM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "821020032702-nukj5kutcojsl1lskf1gtav6dmr3vth4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

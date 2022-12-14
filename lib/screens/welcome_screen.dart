@@ -36,52 +36,85 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       // backgroundColor: Colors.white.withOpacity(controller.value),
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Row(
-              children: <Widget>[
-                Hero(
-                  tag: 'logo',
-                  child: Container(
-                      child: Image.asset('images/logo.png'),
-                      height: animation.value * 100),
-                ),
-                ColorizeAnimatedTextKit(
-                  text: ['Crew Chat'],
-                  textStyle: kWelcomeTextStyle,
-                  colors: kcolorizeColors,
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 48.0,
-            ),
-            Container(
-              color: Colors.red,
-              padding: EdgeInsets.all(12.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  RoundedBtn(
-                      btncolor: kSecondaryColor,
-                      btntext: 'Already Member',
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/login');
-                      }),
-                  RoundedBtn(
-                      btncolor: kPrimaryColor,
-                      btntext: 'Join Crew',
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/register');
-                      }),
+
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Colors.black, Colors.black]),
+          image: DecorationImage(
+            image: AssetImage('images/welcomebg.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 24.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              SizedBox(
+                height: 300.0,
+              ),
+              Row(
+                children: <Widget>[
+                  Hero(
+                    tag: 'logo',
+                    child: Container(
+                        child: Image.asset('images/logo.png'),
+                        height: animation.value * 100),
+                  ),
+                  ColorizeAnimatedTextKit(
+                    text: ['Crew Chat'],
+                    textStyle: kWelcomeTextStyle,
+                    colors: kcolorizeColors,
+                  ),
                 ],
               ),
-            ),
-          ],
+              SizedBox(
+                height: 250.0,
+              ),
+              Expanded(
+                child: Container(
+                  alignment: Alignment.bottomCenter,
+                  padding: EdgeInsets.all(12.0),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20),
+                      )),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Its time to start the Advanture!',
+                        textAlign: TextAlign.center,
+                        style: kh3TextStyle,
+                      ),
+                      SizedBox(
+                        height: 30.0,
+                      ),
+                      RoundedBtn(
+                          btncolor: kSecondaryColor,
+                          btntext: 'Already Member',
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/login');
+                          }),
+                      RoundedBtn(
+                          btncolor: kPrimaryColor,
+                          btntext: 'Join Crew',
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/register');
+                          }),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

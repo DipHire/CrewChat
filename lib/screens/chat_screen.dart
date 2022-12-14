@@ -25,7 +25,6 @@ class _ChatScreenState extends State<ChatScreen> {
     getCurrentUser();
   }
 
-
   void getCurrentUser() async {
     try {
       final user = await _auth.currentUser;
@@ -50,7 +49,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 Navigator.pop(context);
               }),
         ],
-        title: Text('⚡️Chat'),
+        title: Text('☠️ The Straw Hat Pirates'),
         backgroundColor: Colors.lightBlueAccent,
       ),
       body: SafeArea(
@@ -137,7 +136,8 @@ class MessagesStream extends StatelessWidget {
 }
 
 class MessageBubble extends StatelessWidget {
-  const MessageBubble({required this.sender, required this.text, required this.isMe});
+  const MessageBubble(
+      {required this.sender, required this.text, required this.isMe});
 
   final String sender;
   final String text;

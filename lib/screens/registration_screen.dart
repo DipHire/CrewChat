@@ -28,24 +28,19 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               fit: BoxFit.cover,
             ),
           ),
-          child: Padding(
+          child: Container(
+            height: MediaQuery.of(context).size.height,
             padding: EdgeInsets.symmetric(horizontal: 24.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                SizedBox(
-                  height: 258.0,
-                ),
                 Hero(
                   tag: 'logo',
                   child: Container(
                     height: 200.0,
                     child: Image.asset('images/logo.png'),
                   ),
-                ),
-                SizedBox(
-                  height: 140.0,
                 ),
                 Container(
                   alignment: Alignment.bottomCenter,
@@ -68,6 +63,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         height: 30.0,
                       ),
                       TextField(
+                        style: kTextFieldstyle,
                         textAlign: TextAlign.center,
                         keyboardType: TextInputType.emailAddress,
                         onChanged: (value) {
@@ -80,6 +76,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         height: 8.0,
                       ),
                       TextField(
+                          style: kTextFieldstyle,
                           obscureText: true,
                           textAlign: TextAlign.center,
                           onChanged: (value) {
@@ -108,9 +105,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     ],
                   ),
                 ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height - 850,
-                )
               ],
             ),
           ),

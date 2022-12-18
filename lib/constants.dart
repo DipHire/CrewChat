@@ -5,7 +5,7 @@ const kSecondaryColor = Color(0xfff3272b3);
 
 const kWelcomeTextStyle = TextStyle(
   fontFamily: 'Luffy',
-  fontSize: 70.0,
+  fontSize: 60.0,
   fontWeight: FontWeight.w900,
 );
 const kh3TextStyle = TextStyle(
@@ -28,15 +28,24 @@ const kSendButtonTextStyle = TextStyle(
 );
 
 const kMessageTextFieldDecoration = InputDecoration(
-  contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+  contentPadding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
   hintText: 'Type your message here...',
   border: InputBorder.none,
 );
 
 const kMessageContainerDecoration = BoxDecoration(
-  border: Border(
-    top: BorderSide(color: Colors.lightBlueAccent, width: 2.0),
+  color: Colors.white,
+  boxShadow: [
+    BoxShadow(color: Colors.grey, spreadRadius: 1, blurRadius: 15),
+  ],
+  borderRadius: BorderRadius.all(
+    Radius.circular(12.0),
   ),
+);
+
+const kTextFieldstyle = TextStyle(color: Colors.black87);
+const kMsgTextFieldstyle = TextStyle(
+  color: Colors.black87,
 );
 
 const kInputDecoration = InputDecoration(

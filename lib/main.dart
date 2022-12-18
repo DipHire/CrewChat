@@ -1,4 +1,5 @@
 import 'package:crewchat/screens/chat_screen.dart';
+import 'package:crewchat/screens/chat_screen2.dart';
 import 'package:crewchat/screens/login_screen.dart';
 import 'package:crewchat/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
@@ -12,23 +13,21 @@ Future<void> main() async {
   runApp(FlashChat());
 }
 
-
 class FlashChat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark().copyWith(
-        textTheme: TextTheme(
-          bodyText1: TextStyle(color: Colors.black54),
+        theme: ThemeData.dark().copyWith(
+          textTheme: TextTheme(
+            bodyText1: TextStyle(color: Colors.black54),
+          ),
         ),
-      ),
-      initialRoute: '/',
-      routes: {
-      '/': (context) => WelcomeScreen(),
-      '/login': (context) => LoginScreen(),
-      '/register': (context) => RegistrationScreen(),
-      '/chat': (context) => ChatScreen(),
-      }
-    );
+        initialRoute: '/',
+        routes: {
+          '/': (context) => WelcomeScreen(),
+          '/login': (context) => LoginScreen(),
+          '/register': (context) => RegistrationScreen(),
+          '/chat': (context) => ChatKaro(),
+        });
   }
 }

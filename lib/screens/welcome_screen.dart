@@ -54,27 +54,26 @@ class _WelcomeScreenState extends State<WelcomeScreen>
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              SizedBox(
-                height: 300.0,
+              
+              Expanded(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Hero(
+                      tag: 'logo',
+                      child: Container(
+                          child: Image.asset('images/logo.png'),
+                          height: animation.value * 100),
+                    ),
+                    ColorizeAnimatedTextKit(
+                      text: ['Crew Chat'],
+                      textStyle: kWelcomeTextStyle,
+                      colors: kcolorizeColors,
+                    ),
+                  ],
+                ),
               ),
-              Row(
-                children: <Widget>[
-                  Hero(
-                    tag: 'logo',
-                    child: Container(
-                        child: Image.asset('images/logo.png'),
-                        height: animation.value * 100),
-                  ),
-                  ColorizeAnimatedTextKit(
-                    text: ['Crew Chat'],
-                    textStyle: kWelcomeTextStyle,
-                    colors: kcolorizeColors,
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 250.0,
-              ),
+              
               Expanded(
                 child: Container(
                   alignment: Alignment.bottomCenter,

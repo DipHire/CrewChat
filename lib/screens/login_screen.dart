@@ -20,24 +20,21 @@ class _LoginScreenState extends State<LoginScreen> {
       body: SingleChildScrollView(
         child: Container(
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [Colors.black, Colors.black]),
             image: DecorationImage(
               image: AssetImage('images/loginbg.png'),
               fit: BoxFit.cover,
             ),
           ),
-          child: Padding(
+          child: Container(
             padding: EdgeInsets.symmetric(horizontal: 24.0),
+            height: MediaQuery.of(context).size.height,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                SizedBox(
-                  height: 258.0,
-                ),
+                // SizedBox(
+                //   height: 258.0,
+                // ),
                 Hero(
                   tag: 'logo',
                   child: Container(
@@ -45,9 +42,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Image.asset('images/logo.png'),
                   ),
                 ),
-                SizedBox(
-                  height: 140.0,
-                ),
+                // SizedBox(
+                //   height: 140.0,
+                // ),
                 Container(
                   alignment: Alignment.bottomCenter,
                   padding: EdgeInsets.all(12.0),
@@ -69,6 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         height: 30.0,
                       ),
                       TextField(
+                        style: kTextFieldstyle,
                         textAlign: TextAlign.center,
                         keyboardType: TextInputType.emailAddress,
                         onChanged: (value) {
@@ -81,10 +79,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         height: 8.0,
                       ),
                       TextField(
+                        style: kTextFieldstyle,
                         obscureText: true,
                         textAlign: TextAlign.center,
                         onChanged: (value) {
-                          //Do something with the user input.
                           password = value;
                         },
                         decoration: kInputDecoration.copyWith(
@@ -111,9 +109,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     ],
                   ),
                 ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height - 850,
-                )
+                // SizedBox(
+                //   height: MediaQuery.of(context).size.height - 850,
+                // )
               ],
             ),
           ),
